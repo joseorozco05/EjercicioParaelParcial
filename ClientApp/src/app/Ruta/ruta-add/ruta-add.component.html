@@ -1,0 +1,52 @@
+<form [formGroup]="formRutaAdd" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <div class="col-md-4 mb-3">
+      <label>Codigo</label>
+      <input type="text" formControlName="codigo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.codigo.errors }" placeholder="Ciudad">
+      <div *ngIf="submitted && f.codigo.errors" class="invalid-feedback">
+        <div *ngIf="f.codigo.errors.required">La Fecha es requerida</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-md-4 mb-3">
+      <label>Ciudad de Origen</label>
+      <input type="text" formControlName="ciudadOrigen"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ciudadOrigen.errors }" placeholder="Ciudad">
+      <div *ngIf="submitted && f.ciudadOrigen.errors" class="invalid-feedback">
+        <div *ngIf="f.ciudadOrigen.errors.required">La Fecha es requerida</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+
+    <div class="col-md-4 mb-3">
+      <label>Ciudad Destino</label>
+      <input type="text" formControlName="ciudadDestino" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ciudadDestino.errors }" placeholder="Ciudad">
+      <div *ngIf="submitted && f.ciudadDestino.errors" class="invalid-feedback">
+        <div *ngIf="f.ciudadDestino.errors.required">La Fecha es requerida</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-4 mb-3">
+      <label>Costo</label>
+      <input type="number" formControlName="costo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.costo.errors }" placeholder="Costo">
+      <div *ngIf="submitted && f.costo.errors" class="invalid-feedback">
+        <div *ngIf="f.costo.errors.required">La Fecha es requerida</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="text-center">
+        <button class="btn btn-primary mr-1">Register</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</form>

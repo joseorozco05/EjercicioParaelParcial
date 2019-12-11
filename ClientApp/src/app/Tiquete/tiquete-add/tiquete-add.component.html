@@ -1,0 +1,61 @@
+<form [formGroup]="formRutaAdd" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <div class="col-md-4 mb-3">
+        <label>Id</label>
+        <input type="text" formControlName="Id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Id.errors }" placeholder="Ciudad">
+        <div *ngIf="submitted && f.Id.errors" class="invalid-feedback">
+          <div *ngIf="f.Id.errors.required">La Fecha es requerida</div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="form-group">
+      <div class="col-md-4 mb-3">
+        <label>Ruta Idetificacion</label>
+        <input type="text" formControlName="Id"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.RutaId.errors }" placeholder="Ciudad">
+        <div *ngIf="submitted && f.RutaId.errors" class="invalid-feedback">
+          <div *ngIf="f.rutaId.errors.required">La Fecha es requerida</div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="form-group">
+  
+      <div class="col-md-4 mb-3">
+        <label>Pasajero idetificacion</label>
+        <input type="text" formControlName="Pasajero" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Pasajero.errors }" placeholder="Ciudad">
+        <div *ngIf="submitted && f.Pasajero.errors" class="invalid-feedback">
+          <div *ngIf="f.Pasajero.errors.required">La Fecha es requerida</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-4 mb-3">
+        <label>Cantidad</label>
+        <input type="number" formControlName="Cantidad" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Cantidad.errors }" placeholder="Costo">
+        <div *ngIf="submitted && f.Cantidad.errors" class="invalid-feedback">
+          <div *ngIf="f.Cantidad.errors.required">La Fecha es requerida</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4 mb-3">
+          <label>Total</label>
+          <input type="number" formControlName="Total" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Total.errors }" placeholder="Costo">
+          <div *ngIf="submitted && f.Total.errors" class="invalid-feedback">
+            <div *ngIf="f.Total.errors.required">La Fecha es requerida</div>
+          </div>
+        </div>
+      <div class="form-group">
+        <div class="text-center">
+          <button class="btn btn-primary mr-1">Register</button>
+          <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  
+  </form>
+  

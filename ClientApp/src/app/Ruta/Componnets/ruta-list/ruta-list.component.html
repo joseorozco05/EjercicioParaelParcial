@@ -1,0 +1,21 @@
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Ciudad Origen </th>
+      <th scope="col">Ciudad Destino</th>
+      <th scope="col">Costo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ruta of rutas ; index as i" >
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ ruta.codigo }} </td>
+      <td>{{ ruta.ciudadDestino }}</td>
+      <td>{{ ruta.ciudadOrigen }}</td>
+      <td>{{ ruta.costo  }}</td>
+    </tr>
+  </tbody>
+</table>
+
